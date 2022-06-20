@@ -19,6 +19,7 @@
                                 <form method="POST" action="{{url("empleados")}}">
                                     <div class="row">
                                         <div class="col">
+                                            <h1> Hola esta es mi edicion </h1>
                                             <a href="{{url("empleados/create")}}" class="btn btn-success" data-toggle="tooltip" title="Nuevo empleado">Nuevo</a>
                                         </div>
 
