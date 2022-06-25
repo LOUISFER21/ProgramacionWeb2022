@@ -42,10 +42,10 @@ class EmpleadosController extends Controller
             'apellido_paterno'=>'required|String|max:25|min:2',
             'apellido_materno'=>'required|string|max:25|min:2',
             'area_trabajo'=>'required|string|max:25|min:2',
-            'sueldo_dia'=>'required|Integer|max:25|min:2',
-            'dias_trabajados'=>'required|double|max:25|min:1',
-            'total_neto'=>'required|double|max:25|min:1',
-            'total_bruto'=>'required|double|max:25|min:1'
+            'sueldo_dia'=>'required',
+            'dias_trabajados'=>'required|Integer|max:15|min:1',
+            'total_neto'=>'required',
+            'total_bruto'=>'required',
             ],
             [],[]);
 
