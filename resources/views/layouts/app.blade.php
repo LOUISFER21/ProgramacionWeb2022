@@ -55,6 +55,14 @@
                             <li class="nav-item">
                                 <a href="{{url("empleados")}}" class="nav-link @yield("empleados")">Trabajador</a>
                             </li>
+                            <li class="nav-item">
+                                <a href="{{url('libros')}}" class="nav-link
+                                @yield('libros')">Libros</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{('categorias')}}" class="nav-link @yield('categorias')"
+                                >Categorias</a>
+                            </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}

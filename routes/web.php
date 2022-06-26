@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\EmpleadosController;
+use \App\Http\Controllers\LibroController;
+use \App\Http\Controllers\CategoriaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +19,10 @@ use \App\Http\Controllers\EmpleadosController;
 Route::get('/', function () {
     return view('welcome');
 });
+
 Route::resource("empleados",EmpleadosController::class);
+Route::resource("libros",LibroController::class);
+Route::resource("categorias",CategoriaController::class);
 
 Auth::routes();
 
@@ -30,3 +35,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
