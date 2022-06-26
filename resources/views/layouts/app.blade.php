@@ -60,8 +60,23 @@
                                 @yield('libros')">Libros</a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{('categorias')}}" class="nav-link @yield('categorias')"
+                                <a href="{{url('categorias')}}" class="nav-link @yield('categorias')"
                                 >Categorias</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{url('notas')}}" class="nav-link @yield('notas')">
+                                    Notas
+                                </a>
+                            </li>
+                            <li class="nav-item">    
+                                <a href="{{url('materias')}}" class="nav-link @yield('materias')">
+                                    Materias
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{url('estudiantes')}}" class="nav-link @yield ('estudiantes')">
+                                    Estudiantes
+                                </a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

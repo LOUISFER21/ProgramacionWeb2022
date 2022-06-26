@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\EmpleadosController;
 use \App\Http\Controllers\LibroController;
 use \App\Http\Controllers\CategoriaController;
+use \App\Http\Controllers\MateriaController;
+use \App\Http\Controllers\EstudianteController;
+use \App\Http\Controllers\NotaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +26,9 @@ Route::get('/', function () {
 Route::resource("empleados",EmpleadosController::class);
 Route::resource("libros",LibroController::class);
 Route::resource("categorias",CategoriaController::class);
+Route::resource("notas",NotaController::class);
+Route::resource("materias",MateriaController::class);
+Route::resource("estudiantes",EstudianteController::class);
 
 Auth::routes();
 
