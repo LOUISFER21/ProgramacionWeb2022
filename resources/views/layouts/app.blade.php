@@ -15,9 +15,10 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    
 </head>
 <body>
     <div id="app">
@@ -52,30 +53,49 @@
                                 </li>
                             @endif
                         @else
-                            <li class="nav-item">
-                                <a href="{{url("empleados")}}" class="nav-link @yield("empleados")">Trabajador</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="{{url('libros')}}" class="nav-link
-                                @yield('libros')">Libros</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="{{url('categorias')}}" class="nav-link @yield('categorias')"
-                                >Categorias</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="{{url('notas')}}" class="nav-link @yield('notas')">
-                                    Notas
+                            <li class="nav-item">    
+                                <a href="{{url('personas')}}" class="nav-link @yield('personas')">
+                                    Personas
                                 </a>
                             </li>
                             <li class="nav-item">    
-                                <a href="{{url('materias')}}" class="nav-link @yield('materias')">
-                                    Materias
+                                <a href="{{url('generos')}}" class="nav-link @yield('generos')">
+                                    Generos
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a href="{{url('estudiantes')}}" class="nav-link @yield ('estudiantes')">
-                                    Estudiantes
+                            <li class="nav-item">    
+                                <a href="{{url('prestamos')}}" class="nav-link @yield('prestamos')">
+                                    Prestamos
+                                </a>
+                            </li>
+                            <li class="nav-item">    
+                                <a href="{{url('peliculas')}}" class="nav-link @yield('peliculas')">
+                                    Peliculas
+                                </a>
+                            </li>
+                            <li class="nav-item">    
+                                <a href="{{url('cintas')}}" class="nav-link @yield('cintas')">
+                                    Cintas
+                                </a>
+                            </li>
+                            <li class="nav-item">    
+                                <a href="{{url('actores')}}" class="nav-link @yield('actores')">
+                                    Actores
+                                </a>
+                            </li>
+                            <li class="nav-item">    
+                                <a href="{{url('directores')}}" class="nav-link @yield('directores')">
+                                    Directores
+                                </a>
+                            </li>
+                            <li class="nav-item">    
+                                <a href="{{url('detalleactores')}}" class="nav-link @yield('detalleactores')">
+                                    Detalle actores
+                                </a>
+                            </li>
+                            <li class="nav-item">    
+                                <a href="{{url('detalledirectores')}}" class="nav-link @yield('detalledirectores')">
+                                    Detalle Directores
                                 </a>
                             </li>
                             <li class="nav-item dropdown">
