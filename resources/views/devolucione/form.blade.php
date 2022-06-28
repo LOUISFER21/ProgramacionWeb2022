@@ -20,7 +20,7 @@
         <label for="fechadevolucion">Fecha de Devolucion</label>
                 <div class="form-floating mb-3">
                     <div class='input-group date' id='datetimepicker'>
-                        <input type="text" class="form-control @error('fechadevolucion') is-invalid @enderror"id="fechadevolucion" placeholder="Fecha devolucion" name="fechadevolucion">
+                        <input type="text" class="form-control @error('fechadevolucion') is-invalid @enderror"id="fechadevolucion" placeholder="" name="fechadevolucion" value="{{$devolucione->fechadevolucion}}">
                         <span class="input-group-addon">
                         <span class="glyphicon glyphicon-calendar"></span>
                         </span>
