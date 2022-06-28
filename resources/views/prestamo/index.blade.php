@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
 @extends('layouts.app')
 
 @section('template_title')
@@ -17,8 +19,8 @@
                             </span>
 
                              <div class="float-right">
-                                <a href="{{ route('prestamos.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
+                                <a href="{{ route('prestamos.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left"><i class="bi bi-plus-circle"></i>
+                                  {{ __(' Create New') }}
                                 </a>
                               </div>
                         </div>
@@ -36,7 +38,7 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Fechaprestamo</th>
+                                        <th>Fechaprestamo</th>
 
                                         <th></th>
                                     </tr>
@@ -46,15 +48,15 @@
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             
-											<td>{{ $prestamo->fechaprestamo }}</td>
+                                            <td>{{ $prestamo->fechaprestamo }}</td>
 
                                             <td>
                                                 <form action="{{ route('prestamos.destroy',$prestamo->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('prestamos.show',$prestamo->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('prestamos.edit',$prestamo->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('prestamos.show',$prestamo->id) }}"><i class="fa fa-fw fa-eye bi-eye"></i> Ver</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('prestamos.edit',$prestamo->id) }}"><i class="fa fa-fw fa-edit bi bi-pencil"></i> Editar</a>
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>
+                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash bi bi-trash"></i> Borrar</button>
                                                 </form>
                                             </td>
                                         </tr>
