@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    Update Devolucione
+    Editar Devolucion
 @endsection
 
 @section('content')
@@ -14,7 +14,11 @@
 
                 <div class="card card-default">
                     <div class="card-header">
+<<<<<<< HEAD
                         <span class="card-title">Edicion Devolucion</span>
+=======
+                        <span class="card-title">Editar Devolucion</span>
+>>>>>>> a491d878f21c4835b6f9b5cc21e562fa3605c91c
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ route('devoluciones.update', $devolucione->id) }}"  role="form" enctype="multipart/form-data">

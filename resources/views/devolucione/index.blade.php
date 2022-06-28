@@ -1,10 +1,14 @@
 @extends('layouts.app')
 
 @section('template_title')
-    Devolucione
+    Devolucion
 @endsection
 
 @section('content')
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-2"> </div>
@@ -18,8 +22,8 @@
                             </span>
 
                              <div class="float-right">
-                                <a href="{{ route('devoluciones.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Nuevo') }}
+                                <a href="{{ route('devoluciones.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left"><i class="bi bi-plus-circle"></i>
+                                  {{ __(' Nuevo') }}
                                 </a>
                               </div>
                         </div>
@@ -35,9 +39,9 @@
                             <table class="table table-striped table-hover">
                                 <thead class="thead">
                                     <tr>
-                                        <th>No</th>
+                                        <th>No.</th>
                                         
-										<th>Detalle Prestamo</th>
+										<th>Detalles de Prestamo</th>
 										<th>Fecha de Devolucion</th>
 										<th>Observaciones</th>
 
@@ -62,11 +66,16 @@
 
                                             <td>
                                                 <form action="{{ route('devoluciones.destroy',$devolucione->id) }}" method="POST">
+<<<<<<< HEAD
                                                     
                                                     <a class="btn btn-sm btn-success" href="{{ route('devoluciones.edit',$devolucione->id) }}"><i class="fa fa-fw fa-edit"></i> Edital</a>
+=======
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('devoluciones.show',$devolucione->id) }}"><i class="fa fa-fw fa-eye bi bi-eye"></i></a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('devoluciones.edit',$devolucione->id) }}"><i class="fa fa-fw fa-edit bi bi-pencil"></i><span class="icon-pencil"></span></a>
+>>>>>>> a491d878f21c4835b6f9b5cc21e562fa3605c91c
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i>Eliminar</button>
+                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash bi bi-trash"></i></button>
                                                 </form>
                                             </td>
                                         </tr>
