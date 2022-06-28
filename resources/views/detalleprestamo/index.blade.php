@@ -19,13 +19,10 @@
                             </span>
 
                              <div class="float-right">
-<<<<<<< HEAD
-                                <a href="{{ route('detalleprestamos.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Nuevo') }}
-=======
+
                                 <a href="{{ route('detalleprestamos.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left"><i class="bi bi-plus-circle"></i>
-                                  {{ __('Create New') }}
->>>>>>> bcb111ab3cf52bf5a06fd36ef21cdea0e476e086
+                                  {{ __('Nuevo') }}
+
                                 </a>
                               </div>
                         </div>
@@ -43,15 +40,11 @@
                                     <tr>
                                         <th>No</th>
                                         
-<<<<<<< HEAD
-										<th>Socio </th>
-										<th>Prestamo </th>
-										<th>Cinta </th>
-=======
-                                        <th>Socio Id</th>
-                                        <th>Prestamo Id</th>
-                                        <th>Cinta Id</th>
->>>>>>> bcb111ab3cf52bf5a06fd36ef21cdea0e476e086
+
+                                        <th>Socio </th>
+                                        <th>Prestamo </th>
+                                        <th>Cinta</th>
+
 
                                         <th></th>
                                     </tr>
@@ -67,19 +60,13 @@
 
                                             <td>
                                                 <form action="{{ route('detalleprestamos.destroy',$detalleprestamo->id) }}" method="POST">
-<<<<<<< HEAD
+
                                                     
-                                                    <a class="btn btn-sm btn-success" href="{{ route('detalleprestamos.edit',$detalleprestamo->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('detalleprestamos.edit',$detalleprestamo->id) }}"><i class="fa fa-fw fa-edit bi bi-pencil"></i> Editar</a>
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> eliminar</button>
-=======
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('detalleprestamos.show',$detalleprestamo->id) }}"><i class="fa fa-fw fa-eye bi-eye"></i> Ver</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('detalleprestamos.edit',$detalleprestamo->id) }}"><i class="fa fa-fw fa-edit bi bi-pencil"></i> Edit</a>
-                                                    @csrf
-                                                    @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash bi bi-trash"></i> Delete</button>
->>>>>>> bcb111ab3cf52bf5a06fd36ef21cdea0e476e086
+                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash bi bi-trash"></i> Eliminar</button>
+
                                                 </form>
                                             </td>
                                         </tr>
