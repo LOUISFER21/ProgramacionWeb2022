@@ -66,13 +66,9 @@
 
                                             <td>
                                                 <form action="{{ route('devoluciones.destroy',$devolucione->id) }}" method="POST">
-<<<<<<< HEAD
+
                                                     
-                                                    <a class="btn btn-sm btn-success" href="{{ route('devoluciones.edit',$devolucione->id) }}"><i class="fa fa-fw fa-edit"></i> Edital</a>
-=======
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('devoluciones.show',$devolucione->id) }}"><i class="fa fa-fw fa-eye bi bi-eye"></i></a>
                                                     <a class="btn btn-sm btn-success" href="{{ route('devoluciones.edit',$devolucione->id) }}"><i class="fa fa-fw fa-edit bi bi-pencil"></i><span class="icon-pencil"></span></a>
->>>>>>> a491d878f21c4835b6f9b5cc21e562fa3605c91c
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash bi bi-trash"></i></button>

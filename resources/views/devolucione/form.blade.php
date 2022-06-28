@@ -15,13 +15,7 @@
             {{ Form::select('detalleprestamo_id',$detalleprestamos,$devolucione->detalleprestamo_id, ['class' => 'form-control' . ($errors->has('detalleprestamo_id') ? ' is-invalid' : ''), 'placeholder' => 'Selecciona']) }}
             {!! $errors->first('detalleprestamo_id', '<div class="invalid-feedback">:message</div>') !!}
         </div>
-<<<<<<< HEAD
-        <div class="form-group">
-            {{ Form::label('Fecha Devolucion') }}
-            {{ Form::text ('fechadevolucion', $devolucione->fechadevolucion, ['class' => 'form-control' . ($errors->has('fechadevolucion') ? ' is-invalid' : ''), 'placeholder' => 'Ingresa Fecha']) }}
-            {!! $errors->first('fechadevolucion', '<div class="invalid-feedback">:message</div>') !!}
-        </div>
-=======
+
 
         <label for="fechadevolucion">Fecha de Devolucion</label>
                 <div class="form-floating mb-3">
@@ -39,7 +33,7 @@
                     </script>
                 </div>
 
->>>>>>> a491d878f21c4835b6f9b5cc21e562fa3605c91c
+
         <div class="form-group">
             {{ Form::label('Observaciones') }}
             {{ Form::text('observaciones', $devolucione->observaciones, ['class' => 'form-control' . ($errors->has('observaciones') ? ' is-invalid' : ''), 'placeholder' => 'Ingresa Obserbacion']) }}
@@ -48,10 +42,8 @@
         <br>
     </div>
     <div class="box-footer mt20">
-<<<<<<< HEAD
-        <button type="submit" class="btn btn-primary">Guardar</button>
-=======
+
         <button type="submit" class="btn btn-primary"><i class="bi bi-bookmark-check"></i> Guardar</button>
->>>>>>> a491d878f21c4835b6f9b5cc21e562fa3605c91c
+
     </div>
 </div>
