@@ -98,6 +98,26 @@
                                     Detalle Directores
                                 </a>
                             </li>
+                            <li class="nav-item">    
+                                <a href="{{url('socios')}}" class="nav-link @yield('socios')">
+                                    Socios
+                                </a>
+                            </li>
+                            <li class="nav-item">    
+                                <a href="{{url('directorfavoritos')}}" class="nav-link @yield('directorfavoritos')">
+                                    Directores Favoritos
+                                </a>
+                            </li>
+                            <li class="nav-item">    
+                                <a href="{{url('detalleprestamos')}}" class="nav-link @yield('detalleprestamos')">
+                                    Detalle prestamos
+                                </a>
+                            </li>
+                            <li class="nav-item">    
+                                <a href="{{url('devoluciones')}}" class="nav-link @yield('devoluciones')">
+                                    Devoluciones
+                                </a>
+                            </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}

@@ -10,6 +10,10 @@ use \App\Http\Controllers\ActoreController;
 use \App\Http\Controllers\DirectoreController;
 use \App\Http\Controllers\DetalleactoreController;
 use \App\Http\Controllers\DetalledirectoreController;
+use \App\Http\Controllers\SocioController;
+use \App\Http\Controllers\DirectorfavoritoController;
+use \App\Http\Controllers\DetalleprestamoController;
+use \App\Http\Controllers\DevolucioneController;
 
 
 /*
@@ -36,6 +40,10 @@ Route::resource("actores",ActoreController::class);
 Route::resource("directores",DirectoreController::class);
 Route::resource("detalleactores",DetalleactoreController::class);
 Route::resource("detalledirectores",DetalledirectoreController::class);
+Route::resource("socios",SocioController::class);
+Route::resource("directorfavoritos",DirectorfavoritoController::class);
+Route::resource("detalleprestamos",DetalleprestamoController::class);
+Route::resource("devoluciones",DevolucioneController::class);
 
 
 Auth::routes();
