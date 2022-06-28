@@ -33,7 +33,7 @@ class DevolucioneController extends Controller
     public function create()
     {
         $devolucione = new Devolucione();
-        $detalleprestamos = Detalleprestamo::pluck('socio_id','id');
+        $detalleprestamos = Detalleprestamo::pluck('cinta_id','id');
         return view('devolucione.create', compact('devolucione','detalleprestamos'));
     }
 
@@ -75,7 +75,7 @@ class DevolucioneController extends Controller
     public function edit($id)
     {
         $devolucione = Devolucione::find($id);
-         $detalleprestamos = Detalleprestamo::pluck('socio_id','id');
+        $detalleprestamos = Detalleprestamo::pluck('cinta_id','id');
 
         return view('devolucione.edit', compact('devolucione','detalleprestamos'));
     }

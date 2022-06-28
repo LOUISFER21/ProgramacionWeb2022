@@ -6,15 +6,15 @@
 
 @section('content')
     <section class="content container-fluid">
-        <div class="">
-            <div class="col-sm-2"> </div>
+        <div class="rom">
+            <div class="col-sm-2"></div>
             <div class="col-md-8">
 
                 @includeif('partials.errors')
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">Update Devolucione</span>
+                        <span class="card-title">Edicion Devolucion</span>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ route('devoluciones.update', $devolucione->id) }}"  role="form" enctype="multipart/form-data">

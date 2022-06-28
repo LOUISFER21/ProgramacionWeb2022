@@ -48,7 +48,7 @@
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             
-											<td>{{ $socio->persona->nombre }}</td>
+											<td>{{ $socio->persona->nombre }} {{ $socio->persona->apellidopaterno }} {{ $socio->persona->apellidomaterno }}</td>
 											<td>{{ $socio->direccion }}</td>
 											<td>{{ $socio->telefono }}</td>
 

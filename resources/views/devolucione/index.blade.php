@@ -52,7 +52,8 @@
 											<td>Cinta: {{ $devolucione->detalleprestamo->cinta->codigo }}
 
                                                 <br>Fecha prestamo: {{ $devolucione->detalleprestamo->prestamo->fechaprestamo }}
-                                                <br>Socio: {{ $devolucione->detalleprestamo->socio->persona->nombre }}
+                                                <br>Socio: {{ $devolucione->detalleprestamo->socio->persona->nombre }}  {{ $devolucione->detalleprestamo->socio->persona->apellidomaterno }} {{ $devolucione->detalleprestamo->socio->persona->apellidomaterno }}
+
 
 
                                             </td>
@@ -61,7 +62,7 @@
 
                                             <td>
                                                 <form action="{{ route('devoluciones.destroy',$devolucione->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('devoluciones.show',$devolucione->id) }}"><i class="fa fa-fw fa-eye"></i> Ver</a>
+                                                    
                                                     <a class="btn btn-sm btn-success" href="{{ route('devoluciones.edit',$devolucione->id) }}"><i class="fa fa-fw fa-edit"></i> Edital</a>
                                                     @csrf
                                                     @method('DELETE')

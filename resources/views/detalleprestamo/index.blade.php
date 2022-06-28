@@ -50,7 +50,7 @@
                                             
 											<td>{{ $detalleprestamo->socio->persona->nombre }}</td>
 											<td>{{ $detalleprestamo->prestamo->fechaprestamo}}</td>
-											<td>{{ $detalleprestamo->cinta->pelicula->titulo }}</td>
+											<td>{{ $detalleprestamo->cinta->codigo }}</td>
 
                                             <td>
                                                 <form action="{{ route('detalleprestamos.destroy',$detalleprestamo->id) }}" method="POST">

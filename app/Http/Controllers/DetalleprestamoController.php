@@ -39,7 +39,7 @@ class DetalleprestamoController extends Controller
         $detalleprestamo = new Detalleprestamo();
         $socios = Socio::pluck('persona_id','id');
         $prestamos = Prestamo::pluck('fechaprestamo','id');
-        $cintas = Cinta::pluck('pelicula_id','id');
+        $cintas = Cinta::pluck('codigo','id');
         return view('detalleprestamo.create', compact('detalleprestamo','socios','prestamos','cintas'));
     }
 
