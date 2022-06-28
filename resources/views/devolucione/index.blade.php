@@ -41,8 +41,8 @@
                                     <tr>
                                         <th>No.</th>
                                         
-										<th>Detalles de Prestamo</th>
-										<th>Fecha de Devolucion</th>
+										<th>Detalles de Préstamo</th>
+										<th>Fecha de Devolución</th>
 										<th>Observaciones</th>
 
                                         <th></th>
@@ -55,7 +55,7 @@
                                             
 											<td>Cinta: {{ $devolucione->detalleprestamo->cinta->codigo }}
 
-                                                <br>Fecha prestamo: {{ $devolucione->detalleprestamo->prestamo->fechaprestamo }}
+                                                <br>Fecha préstamo: {{ $devolucione->detalleprestamo->prestamo->fechaprestamo }}
                                                 <br>Socio: {{ $devolucione->detalleprestamo->socio->persona->nombre }}  {{ $devolucione->detalleprestamo->socio->persona->apellidopaterno }} {{ $devolucione->detalleprestamo->socio->persona->apellidomaterno }}
 
 

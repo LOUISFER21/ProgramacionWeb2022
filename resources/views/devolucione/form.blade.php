@@ -17,7 +17,7 @@
         </div>
 
 
-        <label for="fechadevolucion">Fecha de Devolucion</label>
+        <label for="fechadevolucion">Fecha de Devolución</label>
                 <div class="form-floating mb-3">
                     <div class='input-group date' id='datetimepicker'>
                         <input type="text" class="form-control @error('fechadevolucion') is-invalid @enderror"id="fechadevolucion" placeholder="" name="fechadevolucion" value="{{$devolucione->fechadevolucion}}">
@@ -36,7 +36,7 @@
 
         <div class="form-group">
             {{ Form::label('Observaciones') }}
-            {{ Form::text('observaciones', $devolucione->observaciones, ['class' => 'form-control' . ($errors->has('observaciones') ? ' is-invalid' : ''), 'placeholder' => 'Ingresa Obserbacion']) }}
+            {{ Form::text('observaciones', $devolucione->observaciones, ['class' => 'form-control' . ($errors->has('observaciones') ? ' is-invalid' : ''), 'placeholder' => 'Ingresa Obserbación']) }}
             {!! $errors->first('observaciones', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <br>

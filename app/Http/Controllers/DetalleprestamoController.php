@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Detalleprestamo;
 use Illuminate\Http\Request;
 use App\Models\Socio;
+use App\Models\Persona;
 use App\Models\Prestamo;
 use App\Models\Cinta;
 
@@ -38,9 +39,11 @@ class DetalleprestamoController extends Controller
     {
         $detalleprestamo = new Detalleprestamo();
         $socios = Socio::pluck('persona_id','id');
+        $personas = Persona::pluck('nombre','id');
         $prestamos = Prestamo::pluck('fechaprestamo','id');
         $cintas = Cinta::pluck('codigo','id');
-        return view('detalleprestamo.create', compact('detalleprestamo','socios','prestamos','cintas'));
+        
+        return view('detalleprestamo.create', compact('detalleprestamo','socios','prestamos','cintas','personas'));
     }
 
     /**
@@ -84,7 +87,8 @@ class DetalleprestamoController extends Controller
         $socios = Socio::pluck('persona_id','id');
         $prestamos = Prestamo::pluck('fechaprestamo','id');
         $cintas = Cinta::pluck('codigo','id');
-        return view('detalleprestamo.edit', compact('detalleprestamo','socios','prestamos','cintas'));
+        $personas = Persona::pluck('nombre','id');
+        return view('detalleprestamo.edit', compact('detalleprestamo','socios','prestamos','cintas','personas'));
 
         
     }
