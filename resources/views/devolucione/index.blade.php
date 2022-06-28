@@ -7,18 +7,19 @@
 @section('content')
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-2"> </div>
+            <div class="col-sm-8">
                 <div class="card">
                     <div class="card-header">
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Devolucione') }}
+                                <h1 class="text-center mb-5">{{ __('Devoluciones') }}</h1> 
                             </span>
 
                              <div class="float-right">
                                 <a href="{{ route('devoluciones.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
+                                  {{ __('Crear Nuevo') }}
                                 </a>
                               </div>
                         </div>
@@ -36,8 +37,8 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Detalleprestamo Id</th>
-										<th>Fechadevolucion</th>
+										<th>Detalle Prestamo</th>
+										<th>Fecha de Devolucion</th>
 										<th>Observaciones</th>
 
                                         <th></th>
@@ -48,18 +49,23 @@
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             
-											<td>Socio: {{ $devolucione->detalleprestamo->socio->persona->nombre }}
-                                                <br>Fecha: {{ $devolucione->detalleprestamo->prestamo->fechaprestamo }}</td>
+											<td>Cinta: {{ $devolucione->detalleprestamo->cinta->codigo }}
+
+                                                <br>Fecha prestamo: {{ $devolucione->detalleprestamo->prestamo->fechaprestamo }}
+                                                <br>Socio: {{ $devolucione->detalleprestamo->socio->persona->nombre }}
+
+
+                                            </td>
 											<td>{{ $devolucione->fechadevolucion }}</td>
 											<td>{{ $devolucione->observaciones }}</td>
 
                                             <td>
                                                 <form action="{{ route('devoluciones.destroy',$devolucione->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('devoluciones.show',$devolucione->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('devoluciones.edit',$devolucione->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('devoluciones.show',$devolucione->id) }}"><i class="fa fa-fw fa-eye"></i> Ver</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('devoluciones.edit',$devolucione->id) }}"><i class="fa fa-fw fa-edit"></i> Edital</a>
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>
+                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i>Eliminar</button>
                                                 </form>
                                             </td>
                                         </tr>
