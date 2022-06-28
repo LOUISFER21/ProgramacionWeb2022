@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
 @extends('layouts.app')
 
 @section('template_title')
@@ -7,8 +9,7 @@
 @section('content')
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-2"> </div>
-            <div class="col-sm-8">
+            <div class="col-sm-12">
                 <div class="card">
                     <div class="card-header">
                         <div style="display: flex; justify-content: space-between; align-items: center;">
@@ -18,7 +19,7 @@
                             </span>
 
                              <div class="float-right">
-                                <a href="{{ route('detalleprestamos.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
+                                <a href="{{ route('detalleprestamos.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left"><i class="bi bi-plus-circle"></i>
                                   {{ __('Create New') }}
                                 </a>
                               </div>
@@ -37,9 +38,9 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Socio Id</th>
-										<th>Prestamo Id</th>
-										<th>Cinta Id</th>
+                                        <th>Socio Id</th>
+                                        <th>Prestamo Id</th>
+                                        <th>Cinta Id</th>
 
                                         <th></th>
                                     </tr>
@@ -49,17 +50,17 @@
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             
-											<td>{{ $detalleprestamo->socio->persona->nombre }}</td>
-											<td>{{ $detalleprestamo->prestamo->fechaprestamo}}</td>
-											<td>{{ $detalleprestamo->cinta->codigo }}</td>
+                                            <td>{{ $detalleprestamo->socio->persona->nombre }}</td>
+                                            <td>{{ $detalleprestamo->prestamo->fechaprestamo}}</td>
+                                            <td>{{ $detalleprestamo->cinta->codigo }}</td>
 
                                             <td>
                                                 <form action="{{ route('detalleprestamos.destroy',$detalleprestamo->id) }}" method="POST">
-                                                    
-                                                    <a class="btn btn-sm btn-success" href="{{ route('detalleprestamos.edit',$detalleprestamo->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('detalleprestamos.show',$detalleprestamo->id) }}"><i class="fa fa-fw fa-eye bi-eye"></i> Ver</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('detalleprestamos.edit',$detalleprestamo->id) }}"><i class="fa fa-fw fa-edit bi bi-pencil"></i> Edit</a>
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>
+                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash bi bi-trash"></i> Delete</button>
                                                 </form>
                                             </td>
                                         </tr>
