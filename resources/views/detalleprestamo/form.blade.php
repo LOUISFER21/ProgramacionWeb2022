@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
 <div class="box box-info padding-1">
     <div class="box-body">
         
@@ -19,6 +21,6 @@
 
     </div>
     <div class="box-footer mt20">
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary"><i class="bi bi-bookmark-check"></i> Guardar</button>
     </div>
 </div>
