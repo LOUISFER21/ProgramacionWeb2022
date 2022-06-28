@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Devolucione;
+use App\Models\Cinta;
 use App\Models\Detalleprestamo;
 use Illuminate\Http\Request;
 
@@ -34,7 +35,8 @@ class DevolucioneController extends Controller
     {
         $devolucione = new Devolucione();
         $detalleprestamos = Detalleprestamo::pluck('cinta_id','id');
-        return view('devolucione.create', compact('devolucione','detalleprestamos'));
+        $cintas = Cinta::pluck('codigo','id');
+        return view('devolucione.create', compact('devolucione','detalleprestamos','cintas'));
     }
 
     /**
@@ -76,8 +78,8 @@ class DevolucioneController extends Controller
     {
         $devolucione = Devolucione::find($id);
         $detalleprestamos = Detalleprestamo::pluck('cinta_id','id');
-
-        return view('devolucione.edit', compact('devolucione','detalleprestamos'));
+        $cintas = Cinta::pluck('codigo','id');
+        return view('devolucione.edit', compact('devolucione','detalleprestamos','cintas'));
     }
 
     /**

@@ -7,7 +7,8 @@
 @section('content')
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-2"> </div>
+            <div class="col-sm-8">
                 <div class="card">
                     <div class="card-header">
                         <div style="display: flex; justify-content: space-between; align-items: center;">
@@ -54,7 +55,7 @@
 
                                             <td>
                                                 <form action="{{ route('detalleprestamos.destroy',$detalleprestamo->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('detalleprestamos.show',$detalleprestamo->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
+                                                    
                                                     <a class="btn btn-sm btn-success" href="{{ route('detalleprestamos.edit',$detalleprestamo->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
                                                     @csrf
                                                     @method('DELETE')

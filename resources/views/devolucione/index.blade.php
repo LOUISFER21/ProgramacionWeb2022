@@ -56,7 +56,7 @@
 											<td>Cinta: {{ $devolucione->detalleprestamo->cinta->codigo }}
 
                                                 <br>Fecha prestamo: {{ $devolucione->detalleprestamo->prestamo->fechaprestamo }}
-                                                <br>Socio: {{ $devolucione->detalleprestamo->socio->persona->nombre }}  {{ $devolucione->detalleprestamo->socio->persona->apellidomaterno }} {{ $devolucione->detalleprestamo->socio->persona->apellidomaterno }}
+                                                <br>Socio: {{ $devolucione->detalleprestamo->socio->persona->nombre }}  {{ $devolucione->detalleprestamo->socio->persona->apellidopaterno }} {{ $devolucione->detalleprestamo->socio->persona->apellidomaterno }}
 
 
 

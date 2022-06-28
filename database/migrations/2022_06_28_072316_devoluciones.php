@@ -13,10 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('devoluciones', function (Blueprint $table) {
+        
+         Schema::create('devoluciones', function (Blueprint $table) {
             $table->id();
             $table->foreignId('detalleprestamo_id')->constrained('detalleprestamos');
-            $table->string('fechadevolucion',30);
+            $table->date('fechadevolucion');
             $table->string('observaciones',30);
             $table->timestamps();
         });

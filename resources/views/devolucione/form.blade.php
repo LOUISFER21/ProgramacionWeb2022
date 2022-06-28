@@ -12,7 +12,7 @@
     <div class="box-body">
         <div class="form-group">
             {{ Form::label('Detalleprestamo') }}
-            {{ Form::select('detalleprestamo_id',$detalleprestamos,$devolucione->detalleprestamo_id, ['class' => 'form-control' . ($errors->has('detalleprestamo_id') ? ' is-invalid' : ''), 'placeholder' => 'Selecciona']) }}
+            {{ Form::select('detalleprestamo_id',$cintas,$devolucione->detalleprestamo_id, ['class' => 'form-control' . ($errors->has('detalleprestamo_id') ? ' is-invalid' : ''), 'placeholder' => 'Selecciona']) }}
             {!! $errors->first('detalleprestamo_id', '<div class="invalid-feedback">:message</div>') !!}
         </div>
 

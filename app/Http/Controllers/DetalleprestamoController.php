@@ -81,8 +81,12 @@ class DetalleprestamoController extends Controller
     public function edit($id)
     {
         $detalleprestamo = Detalleprestamo::find($id);
+        $socios = Socio::pluck('persona_id','id');
+        $prestamos = Prestamo::pluck('fechaprestamo','id');
+        $cintas = Cinta::pluck('codigo','id');
+        return view('detalleprestamo.edit', compact('detalleprestamo','socios','prestamos','cintas'));
 
-        return view('detalleprestamo.edit', compact('detalleprestamo'));
+        
     }
 
     /**
