@@ -75,8 +75,9 @@ class DevolucioneController extends Controller
     public function edit($id)
     {
         $devolucione = Devolucione::find($id);
+         $detalleprestamos = Detalleprestamo::pluck('socio_id','id');
 
-        return view('devolucione.edit', compact('devolucione'));
+        return view('devolucione.edit', compact('devolucione','detalleprestamos'));
     }
 
     /**
